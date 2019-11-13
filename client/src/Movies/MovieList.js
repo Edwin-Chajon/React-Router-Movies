@@ -21,6 +21,7 @@ const MovieList = props => {
     getMovies();
   }, []);
   
+  
   return (
     <div className="movie-list">
       {movies.map(movie => (
