@@ -3,6 +3,7 @@ import axios from 'axios';
 import { BrowserRouter as Link} from "react-router-dom";
 
 const MovieList = props => {
+  console.log("test")
   const [movies, setMovies] = useState([])
   useEffect(() => {
     const getMovies = () => {
@@ -10,6 +11,7 @@ const MovieList = props => {
         .get('http://localhost:5000/api/movies')
         .then(response => {
           setMovies(response.data);
+          console.log(response, "j")
         })
         .catch(error => {
           console.error('Server Error', error);
